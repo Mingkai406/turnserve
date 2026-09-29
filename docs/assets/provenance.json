@@ -1,0 +1,21 @@
+{
+  "renderer": "Matplotlib",
+  "renderer_version": "3.11.2",
+  "inputs": {
+    "results/smoke-cpu/fifo.jsonl": "a17a427687c3a55d7b530c25e4d03f403034aa60df5e72d768a5a02b7c0f0b4a",
+    "results/smoke-cpu/interleave.jsonl": "b4210d95e8885d091286fb7dcc6f76582b7b090b6338df9d41237c95e0a709a5",
+    "results/smoke-cpu/round-robin.jsonl": "2250a07677cbd0d58a088d6688c3be6e52cccd7758b8fee0ab87ae933f95be2a"
+  },
+  "figures": {
+    "architecture": "Non-quantitative source-derived schematic",
+    "scheduling-map": "Dispatch order by policy; one raw event per symbol",
+    "recorded-run": "Interleave output-token counts and request lifetimes",
+    "cancellation-detail": "Interleave replacement and commit events; magnified time axis"
+  },
+  "replication": "One functional smoke run per policy; no pooled statistics or uncertainty estimates",
+  "visual_references": [
+    "https://ggraph.data-imaginist.com/",
+    "https://patchwork.data-imaginist.com/",
+    "https://ggforce.data-imaginist.com/reference/facet_zoom.html"
+  ]
+}

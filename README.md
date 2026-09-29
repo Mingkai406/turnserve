@@ -1,22 +1,42 @@
 # TurnServe
 
-A small C++ inference runtime for conversations that can change mid-generation.
+C++ LLM inference runtime with multi-session scheduling, cancellation-safe turn replacement, and trace-driven observability.
 
 [Build & tests](https://github.com/Mingkai406/turnserve/actions/workflows/ci.yml) · [Design](docs/design.md) · [Recorded run](results/smoke-cpu/README.md) · [Roadmap](docs/roadmap.md)
 
 A long prompt, a short question, and an interrupted answer compete for the same model. TurnServe makes that competition explicit: it schedules prefill and decode work, bounds admission, and keeps cancelled generations out of committed conversation history.
 
-![Execution model: admit, schedule, execute, commit](docs/assets/architecture.svg)
+![Concurrent requests share a scheduler and model within one runtime owner; generation checks control history commits](docs/assets/architecture.svg)
 
 ## What works today
 
 The first version includes a C++20 runtime, three scheduling policies, explicit request replacement, bounded queues and session state, and a real **llama.cpp CPU backend** pinned to a commit. Model weights and inference kernels come from llama.cpp; TurnServe implements the request lifecycle and scheduling loop.
 
-The replay below ran with **SmolLM2-135M-Instruct Q4_K_M**. A document request and two short conversations share one model. After three output tokens, one user replaces their question. The old generation is cancelled; only the replacement is committed.
+## See the runtime at work
 
-![Recorded request lifetimes, generated tokens, and cancellation](docs/assets/recorded-run.svg)
+The figures below use checked-in **SmolLM2-135M-Instruct Q4_K_M** inference traces. Three conversations share one model; one question is replaced after its third output token. Each figure answers a different question.
 
-This is an early systems prototype. The checked-in traces verify execution and lifecycle behavior; they are **not a performance comparison**. There is no HTTP endpoint, multi-GPU support, or production deployment claim yet.
+### How is work scheduled?
+
+Prefill chunks are squares; decode steps are circles. The facets expose dispatch order under each policy. A position on this axis is an event index, not a time measurement or a batch number.
+
+![Faceted dispatch maps for FIFO, round-robin, and interleave, using real recorded events](docs/assets/scheduling-map.svg)
+
+### When does each conversation produce output?
+
+The step curves show emitted token counts. The companion plot separates time to first token from time to completion or cancellation, measured from each request's submission.
+
+![Cumulative output curves and first-token-to-terminal intervals from the interleave run](docs/assets/recorded-run.svg)
+
+### What happens when the user changes the question?
+
+The full interaction and magnified acknowledgement window expose the handoff between generations. The original turn has no history commit; the replacement has one.
+
+![Cancellation overview, magnified acknowledgement events, and per-generation commit counts](docs/assets/cancellation-detail.svg)
+
+[Raw traces and run conditions](results/smoke-cpu/README.md) · [Figure sources, visual references and reproduction](docs/figures.md)
+
+These are functional smoke runs, not a controlled performance comparison. Replacement arrival times depend on generated tokens. The current implementation is a local runtime and replay tool; the streaming HTTP adapter is the next integration layer.
 
 ## Run it
 
@@ -88,6 +108,6 @@ The next step is a workload-driven benchmark with fixed arrival traces and an up
 
 TurnServe builds on [llama.cpp](https://github.com/ggml-org/llama.cpp), whose native server already supports continuous batching and prompt caching. Chunked prefill and latency/throughput scheduling have substantial prior work, including [Sarathi-Serve](https://arxiv.org/abs/2403.02310). [Locality-aware Fair Scheduling](https://arxiv.org/abs/2501.14312) studies the fairness/locality tradeoff.
 
-This repository explores their surrounding engineering questions in a small, inspectable runtime. It does not claim a new scheduling algorithm or a speedup over those systems.
+This repository explores their surrounding engineering questions in an inspectable C++ runtime. It does not claim a new scheduling algorithm or a speedup over those systems.
 
 MIT licensed. Third-party code and model weights retain their own licenses; see [NOTICE](NOTICE).

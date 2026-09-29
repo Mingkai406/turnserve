@@ -16,7 +16,7 @@ The interleave run emitted `Here are ten` for the original question before it wa
 
 The replacement is triggered after the third emitted token, so its arrival time changes with scheduling. This is a closed-loop interaction demo, not a fixed-arrival A/B study. There was no warmup/repetition protocol, controlled machine load, hardware inventory, peak-memory measurement, or upstream-server comparison. Do not use these three runs to claim a latency improvement or estimate a p95 distribution.
 
-See [manifest.json](manifest.json) for source-file hashes, dependency/model pins, and environment details. The figure is regenerated directly from `interleave.jsonl`:
+See [manifest.json](manifest.json) for source-file hashes, dependency/model pins, and environment details. The numerical figures are regenerated from the checked-in traces; install the optional [plotting dependencies](../../scripts/requirements-figures.txt) first:
 
 ```sh
 python3 scripts/inspect_trace.py results/smoke-cpu/interleave.jsonl

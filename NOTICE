@@ -11,4 +11,6 @@ https://huggingface.co/HuggingFaceTB/SmolLM2-135M-Instruct
 https://huggingface.co/bartowski/SmolLM2-135M-Instruct-GGUF
 
 The diagrams in docs/assets are original programmatically drawn SVGs.
-The recorded-run figure is generated from the checked-in inference trace.
+The numerical figures are generated from checked-in inference traces.
+The rendering script uses Matplotlib. Visual references from the ggplot2
+extension ecosystem are credited in docs/figures.md; no gallery images are copied.
