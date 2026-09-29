@@ -1,0 +1,49 @@
+{
+  "source": "round-robin.jsonl",
+  "outcomes": {
+    "completed": 3,
+    "cancelled": 1
+  },
+  "requests": [
+    {
+      "request": 1,
+      "session": "document",
+      "status": "completed",
+      "input_tokens": 501,
+      "output_tokens": 48,
+      "ttft_ms": 398.171,
+      "duration_ms": 515.774,
+      "output": "The station records temperature, wind, and rainfall each morning. The station records temperature, wind, and rainfall each morning. The station records temperature, wind, and rainfall each morning. The station records temperature, wind, and rainfall each morning."
+    },
+    {
+      "request": 2,
+      "session": "short",
+      "status": "completed",
+      "input_tokens": 19,
+      "output_tokens": 7,
+      "ttft_ms": 47.834,
+      "duration_ms": 398.167,
+      "output": "The capital of France is Paris."
+    },
+    {
+      "request": 3,
+      "session": "revision",
+      "status": "cancelled",
+      "input_tokens": 20,
+      "output_tokens": 3,
+      "ttft_ms": 47.843,
+      "duration_ms": 136.612,
+      "output": "Here are ten"
+    },
+    {
+      "request": 4,
+      "session": "revision",
+      "status": "completed",
+      "input_tokens": 21,
+      "output_tokens": 10,
+      "ttft_ms": 50.878,
+      "duration_ms": 284.587,
+      "output": "One planet in the solar system is called Mars."
+    }
+  ]
+}

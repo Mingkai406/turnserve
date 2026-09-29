@@ -1,0 +1,165 @@
+{"type":"run","request":0,"session":"fifo","generation":0,"ms":0.000000,"text":"llama.cpp / CPU / greedy","count":0}
+{"type":"submitted","request":1,"session":"document","generation":0,"ms":0.005584,"text":"","count":0}
+{"type":"accepted","request":1,"session":"document","generation":1,"ms":1.629000,"text":"","count":501}
+{"type":"submitted","request":2,"session":"short","generation":0,"ms":0.006042,"text":"","count":0}
+{"type":"accepted","request":2,"session":"short","generation":1,"ms":1.736084,"text":"","count":19}
+{"type":"submitted","request":3,"session":"revision","generation":0,"ms":0.007084,"text":"","count":0}
+{"type":"accepted","request":3,"session":"revision","generation":1,"ms":1.829334,"text":"","count":20}
+{"type":"admitted","request":1,"session":"document","generation":1,"ms":1.830459,"text":"","count":0}
+{"type":"admitted","request":2,"session":"short","generation":1,"ms":1.831250,"text":"","count":0}
+{"type":"admitted","request":3,"session":"revision","generation":1,"ms":1.832084,"text":"","count":0}
+{"type":"prefill","request":1,"session":"document","generation":1,"ms":1.833334,"text":"","count":64}
+{"type":"prefill","request":1,"session":"document","generation":1,"ms":38.344417,"text":"","count":64}
+{"type":"prefill","request":1,"session":"document","generation":1,"ms":75.534084,"text":"","count":64}
+{"type":"prefill","request":1,"session":"document","generation":1,"ms":116.207042,"text":"","count":64}
+{"type":"prefill","request":1,"session":"document","generation":1,"ms":159.868417,"text":"","count":64}
+{"type":"prefill","request":1,"session":"document","generation":1,"ms":206.310084,"text":"","count":64}
+{"type":"prefill","request":1,"session":"document","generation":1,"ms":255.769084,"text":"","count":64}
+{"type":"prefill","request":1,"session":"document","generation":1,"ms":308.522709,"text":"","count":53}
+{"type":"token","request":1,"session":"document","generation":1,"ms":358.323000,"text":"The","count":1}
+{"type":"decode","request":1,"session":"document","generation":1,"ms":358.333709,"text":"","count":1}
+{"type":"token","request":1,"session":"document","generation":1,"ms":360.596750,"text":" station","count":2}
+{"type":"decode","request":1,"session":"document","generation":1,"ms":360.603250,"text":"","count":1}
+{"type":"token","request":1,"session":"document","generation":1,"ms":362.639625,"text":" records","count":3}
+{"type":"decode","request":1,"session":"document","generation":1,"ms":362.645292,"text":"","count":1}
+{"type":"token","request":1,"session":"document","generation":1,"ms":364.911917,"text":" temperature","count":4}
+{"type":"decode","request":1,"session":"document","generation":1,"ms":364.920375,"text":"","count":1}
+{"type":"token","request":1,"session":"document","generation":1,"ms":367.122375,"text":",","count":5}
+{"type":"decode","request":1,"session":"document","generation":1,"ms":367.130917,"text":"","count":1}
+{"type":"token","request":1,"session":"document","generation":1,"ms":369.229709,"text":" wind","count":6}
+{"type":"decode","request":1,"session":"document","generation":1,"ms":369.236250,"text":"","count":1}
+{"type":"token","request":1,"session":"document","generation":1,"ms":371.378334,"text":",","count":7}
+{"type":"decode","request":1,"session":"document","generation":1,"ms":371.385459,"text":"","count":1}
+{"type":"token","request":1,"session":"document","generation":1,"ms":373.664375,"text":" and","count":8}
+{"type":"decode","request":1,"session":"document","generation":1,"ms":373.674000,"text":"","count":1}
+{"type":"token","request":1,"session":"document","generation":1,"ms":375.877792,"text":" rainfall","count":9}
+{"type":"decode","request":1,"session":"document","generation":1,"ms":375.883584,"text":"","count":1}
+{"type":"token","request":1,"session":"document","generation":1,"ms":377.971042,"text":" each","count":10}
+{"type":"decode","request":1,"session":"document","generation":1,"ms":377.977917,"text":"","count":1}
+{"type":"token","request":1,"session":"document","generation":1,"ms":380.217084,"text":" morning","count":11}
+{"type":"decode","request":1,"session":"document","generation":1,"ms":380.223625,"text":"","count":1}
+{"type":"token","request":1,"session":"document","generation":1,"ms":382.455542,"text":".","count":12}
+{"type":"decode","request":1,"session":"document","generation":1,"ms":382.467750,"text":"","count":1}
+{"type":"token","request":1,"session":"document","generation":1,"ms":385.019250,"text":" The","count":13}
+{"type":"decode","request":1,"session":"document","generation":1,"ms":385.027917,"text":"","count":1}
+{"type":"token","request":1,"session":"document","generation":1,"ms":387.318667,"text":" station","count":14}
+{"type":"decode","request":1,"session":"document","generation":1,"ms":387.325250,"text":"","count":1}
+{"type":"token","request":1,"session":"document","generation":1,"ms":389.868375,"text":" records","count":15}
+{"type":"decode","request":1,"session":"document","generation":1,"ms":389.875125,"text":"","count":1}
+{"type":"token","request":1,"session":"document","generation":1,"ms":392.569292,"text":" temperature","count":16}
+{"type":"decode","request":1,"session":"document","generation":1,"ms":392.576709,"text":"","count":1}
+{"type":"token","request":1,"session":"document","generation":1,"ms":394.944792,"text":",","count":17}
+{"type":"decode","request":1,"session":"document","generation":1,"ms":394.950334,"text":"","count":1}
+{"type":"token","request":1,"session":"document","generation":1,"ms":397.383292,"text":" wind","count":18}
+{"type":"decode","request":1,"session":"document","generation":1,"ms":397.389167,"text":"","count":1}
+{"type":"token","request":1,"session":"document","generation":1,"ms":399.811500,"text":",","count":19}
+{"type":"decode","request":1,"session":"document","generation":1,"ms":399.818625,"text":"","count":1}
+{"type":"token","request":1,"session":"document","generation":1,"ms":402.155167,"text":" and","count":20}
+{"type":"decode","request":1,"session":"document","generation":1,"ms":402.159834,"text":"","count":1}
+{"type":"token","request":1,"session":"document","generation":1,"ms":404.548042,"text":" rainfall","count":21}
+{"type":"decode","request":1,"session":"document","generation":1,"ms":404.553750,"text":"","count":1}
+{"type":"token","request":1,"session":"document","generation":1,"ms":407.301334,"text":" each","count":22}
+{"type":"decode","request":1,"session":"document","generation":1,"ms":407.308709,"text":"","count":1}
+{"type":"token","request":1,"session":"document","generation":1,"ms":409.665959,"text":" morning","count":23}
+{"type":"decode","request":1,"session":"document","generation":1,"ms":409.672292,"text":"","count":1}
+{"type":"token","request":1,"session":"document","generation":1,"ms":412.045834,"text":".","count":24}
+{"type":"decode","request":1,"session":"document","generation":1,"ms":412.051750,"text":"","count":1}
+{"type":"token","request":1,"session":"document","generation":1,"ms":414.488334,"text":" The","count":25}
+{"type":"decode","request":1,"session":"document","generation":1,"ms":414.494250,"text":"","count":1}
+{"type":"token","request":1,"session":"document","generation":1,"ms":416.909000,"text":" station","count":26}
+{"type":"decode","request":1,"session":"document","generation":1,"ms":416.915750,"text":"","count":1}
+{"type":"token","request":1,"session":"document","generation":1,"ms":419.176250,"text":" records","count":27}
+{"type":"decode","request":1,"session":"document","generation":1,"ms":419.181667,"text":"","count":1}
+{"type":"token","request":1,"session":"document","generation":1,"ms":421.611000,"text":" temperature","count":28}
+{"type":"decode","request":1,"session":"document","generation":1,"ms":421.617250,"text":"","count":1}
+{"type":"token","request":1,"session":"document","generation":1,"ms":424.180125,"text":",","count":29}
+{"type":"decode","request":1,"session":"document","generation":1,"ms":424.187167,"text":"","count":1}
+{"type":"token","request":1,"session":"document","generation":1,"ms":426.550167,"text":" wind","count":30}
+{"type":"decode","request":1,"session":"document","generation":1,"ms":426.554834,"text":"","count":1}
+{"type":"token","request":1,"session":"document","generation":1,"ms":429.090750,"text":",","count":31}
+{"type":"decode","request":1,"session":"document","generation":1,"ms":429.127167,"text":"","count":1}
+{"type":"token","request":1,"session":"document","generation":1,"ms":431.594042,"text":" and","count":32}
+{"type":"decode","request":1,"session":"document","generation":1,"ms":431.600709,"text":"","count":1}
+{"type":"token","request":1,"session":"document","generation":1,"ms":434.150334,"text":" rainfall","count":33}
+{"type":"decode","request":1,"session":"document","generation":1,"ms":434.157709,"text":"","count":1}
+{"type":"token","request":1,"session":"document","generation":1,"ms":436.721084,"text":" each","count":34}
+{"type":"decode","request":1,"session":"document","generation":1,"ms":436.725250,"text":"","count":1}
+{"type":"token","request":1,"session":"document","generation":1,"ms":439.156167,"text":" morning","count":35}
+{"type":"decode","request":1,"session":"document","generation":1,"ms":439.162667,"text":"","count":1}
+{"type":"token","request":1,"session":"document","generation":1,"ms":441.730375,"text":".","count":36}
+{"type":"decode","request":1,"session":"document","generation":1,"ms":441.739000,"text":"","count":1}
+{"type":"token","request":1,"session":"document","generation":1,"ms":444.303250,"text":" The","count":37}
+{"type":"decode","request":1,"session":"document","generation":1,"ms":444.311667,"text":"","count":1}
+{"type":"token","request":1,"session":"document","generation":1,"ms":446.750959,"text":" station","count":38}
+{"type":"decode","request":1,"session":"document","generation":1,"ms":446.759292,"text":"","count":1}
+{"type":"token","request":1,"session":"document","generation":1,"ms":449.107500,"text":" records","count":39}
+{"type":"decode","request":1,"session":"document","generation":1,"ms":449.114500,"text":"","count":1}
+{"type":"token","request":1,"session":"document","generation":1,"ms":451.539167,"text":" temperature","count":40}
+{"type":"decode","request":1,"session":"document","generation":1,"ms":451.545500,"text":"","count":1}
+{"type":"token","request":1,"session":"document","generation":1,"ms":453.782042,"text":",","count":41}
+{"type":"decode","request":1,"session":"document","generation":1,"ms":453.787792,"text":"","count":1}
+{"type":"token","request":1,"session":"document","generation":1,"ms":456.131209,"text":" wind","count":42}
+{"type":"decode","request":1,"session":"document","generation":1,"ms":456.138084,"text":"","count":1}
+{"type":"token","request":1,"session":"document","generation":1,"ms":458.711792,"text":",","count":43}
+{"type":"decode","request":1,"session":"document","generation":1,"ms":458.718459,"text":"","count":1}
+{"type":"token","request":1,"session":"document","generation":1,"ms":460.994334,"text":" and","count":44}
+{"type":"decode","request":1,"session":"document","generation":1,"ms":460.999459,"text":"","count":1}
+{"type":"token","request":1,"session":"document","generation":1,"ms":463.315959,"text":" rainfall","count":45}
+{"type":"decode","request":1,"session":"document","generation":1,"ms":463.323209,"text":"","count":1}
+{"type":"token","request":1,"session":"document","generation":1,"ms":465.617542,"text":" each","count":46}
+{"type":"decode","request":1,"session":"document","generation":1,"ms":465.626792,"text":"","count":1}
+{"type":"token","request":1,"session":"document","generation":1,"ms":468.109292,"text":" morning","count":47}
+{"type":"decode","request":1,"session":"document","generation":1,"ms":468.115917,"text":"","count":1}
+{"type":"token","request":1,"session":"document","generation":1,"ms":470.452375,"text":".","count":48}
+{"type":"committed","request":1,"session":"document","generation":1,"ms":470.500500,"text":"","count":0}
+{"type":"completed","request":1,"session":"document","generation":1,"ms":470.501875,"text":"length","count":48}
+{"type":"prefill","request":2,"session":"short","generation":1,"ms":470.505042,"text":"","count":19}
+{"type":"token","request":2,"session":"short","generation":1,"ms":486.394375,"text":"The","count":1}
+{"type":"decode","request":2,"session":"short","generation":1,"ms":486.402042,"text":"","count":1}
+{"type":"token","request":2,"session":"short","generation":1,"ms":488.361834,"text":" capital","count":2}
+{"type":"decode","request":2,"session":"short","generation":1,"ms":488.365875,"text":"","count":1}
+{"type":"token","request":2,"session":"short","generation":1,"ms":490.132250,"text":" of","count":3}
+{"type":"decode","request":2,"session":"short","generation":1,"ms":490.139750,"text":"","count":1}
+{"type":"token","request":2,"session":"short","generation":1,"ms":491.997542,"text":" France","count":4}
+{"type":"decode","request":2,"session":"short","generation":1,"ms":492.002584,"text":"","count":1}
+{"type":"token","request":2,"session":"short","generation":1,"ms":493.598625,"text":" is","count":5}
+{"type":"decode","request":2,"session":"short","generation":1,"ms":493.603000,"text":"","count":1}
+{"type":"token","request":2,"session":"short","generation":1,"ms":495.203209,"text":" Paris","count":6}
+{"type":"decode","request":2,"session":"short","generation":1,"ms":495.207625,"text":"","count":1}
+{"type":"token","request":2,"session":"short","generation":1,"ms":496.907417,"text":".","count":7}
+{"type":"decode","request":2,"session":"short","generation":1,"ms":496.913084,"text":"","count":1}
+{"type":"committed","request":2,"session":"short","generation":1,"ms":498.649834,"text":"","count":0}
+{"type":"completed","request":2,"session":"short","generation":1,"ms":498.653875,"text":"eos","count":7}
+{"type":"prefill","request":3,"session":"revision","generation":1,"ms":498.656667,"text":"","count":20}
+{"type":"token","request":3,"session":"revision","generation":1,"ms":515.424000,"text":"Here","count":1}
+{"type":"decode","request":3,"session":"revision","generation":1,"ms":515.431625,"text":"","count":1}
+{"type":"token","request":3,"session":"revision","generation":1,"ms":517.413250,"text":" are","count":2}
+{"type":"decode","request":3,"session":"revision","generation":1,"ms":517.418959,"text":"","count":1}
+{"type":"token","request":3,"session":"revision","generation":1,"ms":519.204375,"text":" ten","count":3}
+{"type":"submitted","request":4,"session":"revision","generation":0,"ms":519.211625,"text":"","count":0}
+{"type":"cancelled","request":3,"session":"revision","generation":1,"ms":519.346875,"text":"replaced by a new generation","count":3}
+{"type":"accepted","request":4,"session":"revision","generation":2,"ms":519.349959,"text":"","count":21}
+{"type":"admitted","request":4,"session":"revision","generation":2,"ms":519.351209,"text":"","count":0}
+{"type":"prefill","request":4,"session":"revision","generation":2,"ms":519.352167,"text":"","count":21}
+{"type":"token","request":4,"session":"revision","generation":2,"ms":536.871292,"text":"One","count":1}
+{"type":"decode","request":4,"session":"revision","generation":2,"ms":536.878000,"text":"","count":1}
+{"type":"token","request":4,"session":"revision","generation":2,"ms":538.701834,"text":" planet","count":2}
+{"type":"decode","request":4,"session":"revision","generation":2,"ms":538.708625,"text":"","count":1}
+{"type":"token","request":4,"session":"revision","generation":2,"ms":540.527584,"text":" in","count":3}
+{"type":"decode","request":4,"session":"revision","generation":2,"ms":540.535667,"text":"","count":1}
+{"type":"token","request":4,"session":"revision","generation":2,"ms":542.243875,"text":" the","count":4}
+{"type":"decode","request":4,"session":"revision","generation":2,"ms":542.249084,"text":"","count":1}
+{"type":"token","request":4,"session":"revision","generation":2,"ms":543.941334,"text":" solar","count":5}
+{"type":"decode","request":4,"session":"revision","generation":2,"ms":543.947084,"text":"","count":1}
+{"type":"token","request":4,"session":"revision","generation":2,"ms":545.552459,"text":" system","count":6}
+{"type":"decode","request":4,"session":"revision","generation":2,"ms":545.558250,"text":"","count":1}
+{"type":"token","request":4,"session":"revision","generation":2,"ms":547.260667,"text":" is","count":7}
+{"type":"decode","request":4,"session":"revision","generation":2,"ms":547.267292,"text":"","count":1}
+{"type":"token","request":4,"session":"revision","generation":2,"ms":548.991542,"text":" called","count":8}
+{"type":"decode","request":4,"session":"revision","generation":2,"ms":549.035334,"text":"","count":1}
+{"type":"token","request":4,"session":"revision","generation":2,"ms":550.886125,"text":" Mars","count":9}
+{"type":"decode","request":4,"session":"revision","generation":2,"ms":550.890250,"text":"","count":1}
+{"type":"token","request":4,"session":"revision","generation":2,"ms":552.609167,"text":".","count":10}
+{"type":"decode","request":4,"session":"revision","generation":2,"ms":552.615417,"text":"","count":1}
+{"type":"committed","request":4,"session":"revision","generation":2,"ms":554.239000,"text":"","count":0}
+{"type":"completed","request":4,"session":"revision","generation":2,"ms":554.242584,"text":"eos","count":10}

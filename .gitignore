@@ -1,0 +1,7 @@
+/build*/
+/models/
+/runs/
+*.gguf
+.DS_Store
+__pycache__/
+.venv/

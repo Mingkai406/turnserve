@@ -1,0 +1,40 @@
+name: build-and-test
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  contracts:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Configure instrumented core
+        run: cmake -S . -B build -DCMAKE_BUILD_TYPE=Debug -DTURNSERVE_SANITIZE=ON
+      - run: cmake --build build --parallel 2
+      - run: ctest --test-dir build --output-on-failure
+      - name: Replay and verify lifecycle
+        run: |
+          ./build/turnserve-replay --trace trace.jsonl
+          python3 scripts/inspect_trace.py trace.jsonl
+  real-model:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - name: Configure pinned CPU backend
+        run: cmake -S . -B build -DCMAKE_BUILD_TYPE=Release -DTURNSERVE_LLAMA=ON -DGGML_NATIVE=OFF
+      - run: cmake --build build --parallel 2
+      - run: ctest --test-dir build --output-on-failure
+      - run: python3 scripts/fetch_model.py
+      - name: Exercise three policies with real weights
+        run: |
+          mkdir -p runs
+          for policy in fifo round-robin interleave; do
+            ./build/turnserve-replay --model models/SmolLM2-135M-Instruct-Q4_K_M.gguf --policy "$policy" --trace "runs/$policy.jsonl"
+            python3 scripts/inspect_trace.py "runs/$policy.jsonl"
+          done

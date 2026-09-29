@@ -1,0 +1,93 @@
+# TurnServe
+
+A small C++ inference runtime for conversations that can change mid-generation.
+
+[Build & tests](https://github.com/Mingkai406/turnserve/actions/workflows/ci.yml) · [Design](docs/design.md) · [Recorded run](results/smoke-cpu/README.md) · [Roadmap](docs/roadmap.md)
+
+A long prompt, a short question, and an interrupted answer compete for the same model. TurnServe makes that competition explicit: it schedules prefill and decode work, bounds admission, and keeps cancelled generations out of committed conversation history.
+
+![Execution model: admit, schedule, execute, commit](docs/assets/architecture.svg)
+
+## What works today
+
+The first version includes a C++20 runtime, three scheduling policies, explicit request replacement, bounded queues and session state, and a real **llama.cpp CPU backend** pinned to a commit. Model weights and inference kernels come from llama.cpp; TurnServe implements the request lifecycle and scheduling loop.
+
+The replay below ran with **SmolLM2-135M-Instruct Q4_K_M**. A document request and two short conversations share one model. After three output tokens, one user replaces their question. The old generation is cancelled; only the replacement is committed.
+
+![Recorded request lifetimes, generated tokens, and cancellation](docs/assets/recorded-run.svg)
+
+This is an early systems prototype. The checked-in traces verify execution and lifecycle behavior; they are **not a performance comparison**. There is no HTTP endpoint, multi-GPU support, or production deployment claim yet.
+
+## Run it
+
+Requires a C++20 compiler, CMake 3.24+, and Git. Python 3.10+ is used only for model download and trace inspection. Linux and macOS are the initial targets.
+
+### 1. Build the core
+
+```sh
+git clone https://github.com/Mingkai406/turnserve.git
+cd turnserve
+cmake -S . -B build -DCMAKE_BUILD_TYPE=Debug -DTURNSERVE_SANITIZE=ON
+cmake --build build --parallel 2
+ctest --test-dir build --output-on-failure
+./build/turnserve-replay --trace synthetic.jsonl
+python3 scripts/inspect_trace.py synthetic.jsonl
+```
+
+This path uses a deterministic synthetic backend for lifecycle tests. It does not run a language model and its timings are not meaningful inference measurements.
+
+### 2. Run real inference
+
+```sh
+python3 scripts/fetch_model.py
+cmake -S . -B build-llama -DCMAKE_BUILD_TYPE=Release \
+  -DTURNSERVE_LLAMA=ON -DGGML_NATIVE=OFF
+cmake --build build-llama --parallel 2
+mkdir -p runs
+./build-llama/turnserve-replay \
+  --model models/SmolLM2-135M-Instruct-Q4_K_M.gguf \
+  --policy interleave --threads 4 --trace runs/interleave.jsonl
+python3 scripts/inspect_trace.py runs/interleave.jsonl
+```
+
+The downloader verifies the pinned model's SHA-256; weights are about 101 MiB and stay outside Git. This small model is useful for exercising the runtime, not for demonstrating application quality. The reference build uses CPU inference, including the platform's available math libraries.
+
+Use `--policy fifo`, `--policy round-robin`, or `--policy interleave` to run the same scripted scenario under another policy. Replacement is triggered by the third output token, so arrival times differ across policies. Do not interpret this demo as a controlled benchmark.
+
+## Two decisions that shape the implementation
+
+**One owner for model state.** Producers can submit commands concurrently. One runtime owner handles admission, scheduling, backend execution, and history commits. This keeps model state transitions serial while the backend can use CPU worker threads internally. The public `tick()` API makes batch boundaries observable and testable.
+
+**Cancellation has an acknowledgement boundary.** Enqueuing cancellation does not preempt an in-flight model computation. Once the owner acknowledges it, the cancelled request emits no more tokens and cannot commit a turn. Replacement is validated before the old request is cancelled. A malformed replacement therefore does not destroy useful work.
+
+| Policy | Behavior | Tradeoff to examine |
+|---|---|---|
+| `fifo` | Run the oldest admitted request to completion | Simple; short turns can wait behind long work |
+| `round-robin` | Rotate active requests; limit each prefill chunk | Shares progress; mixed batches still have variable cost |
+| `interleave` | Schedule one decode token per decoding request first, then rotated prefill chunks | Leaves prefill budget because the batch budget exceeds the slot count; token budgets are not time guarantees |
+
+All policies use the same context limits and backend. This version does not implement prefix sharing or cross-request speculative decoding. It rebuilds a session's prompt from committed history on the next turn, which makes recovery straightforward at the cost of repeated prefill.
+
+## Read the code
+
+| File | Responsibility |
+|---|---|
+| [`src/runtime.cpp`](src/runtime.cpp) | Admission, scheduling, lifecycle, cancellation and history |
+| [`src/llama_backend.cpp`](src/llama_backend.cpp) | Chat formatting, tokenization, sequence batches, greedy sampling and cleanup |
+| [`tests/runtime_test.cpp`](tests/runtime_test.cpp) | Eight contract suites, including concurrent producers and cancellation during a blocked decode |
+| [`apps/replay.cpp`](apps/replay.cpp) | The reproducible three-conversation demonstration |
+| [`scripts/inspect_trace.py`](scripts/inspect_trace.py) | Trace invariants, per-request outcomes and timings |
+
+The [design notes](docs/design.md) describe API ownership, limits, failure behavior, and trace encoding. The [experiment plan](docs/experiments.md) separates the current smoke test from the controlled measurements still needed.
+
+## Where this is going
+
+The next step is a workload-driven benchmark with fixed arrival traces and an upstream llama-server reference. After that, a streaming adapter can expose the runtime to interactive applications. Compatible fine-tuned models can replace the current test weights; model training and application-specific evaluation remain separate concerns.
+
+## Prior work and dependencies
+
+TurnServe builds on [llama.cpp](https://github.com/ggml-org/llama.cpp), whose native server already supports continuous batching and prompt caching. Chunked prefill and latency/throughput scheduling have substantial prior work, including [Sarathi-Serve](https://arxiv.org/abs/2403.02310). [Locality-aware Fair Scheduling](https://arxiv.org/abs/2501.14312) studies the fairness/locality tradeoff.
+
+This repository explores their surrounding engineering questions in a small, inspectable runtime. It does not claim a new scheduling algorithm or a speedup over those systems.
+
+MIT licensed. Third-party code and model weights retain their own licenses; see [NOTICE](NOTICE).

@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="388" viewBox="0 0 1100 388" role="img" aria-labelledby="title desc">
+<title id="title">Recorded multi-session run</title><desc id="desc">A real CPU inference smoke test. Gray lines show the lifetime of each request, teal marks show emitted tokens, and the orange cross marks acknowledged cancellation. This is not a performance comparison.</desc>
+<style>text{font-family:Arial,Helvetica,sans-serif} .mono{font-family:Menlo,Consolas,monospace}</style>
+<rect width="1100" height="388" fill="#ffffff"/>
+<text x="32" y="33" font-size="12" fill="#5c6c78" letter-spacing="1.8">TURNSERVE / RECORDED EXECUTION</text>
+<text x="32" y="70" font-size="24" fill="#172b3a" >One model, three conversations, one changed question.</text>
+<text x="32" y="97" font-size="13" fill="#5c6c78" >SmolLM2-135M-Instruct · Q4_K_M · CPU, 4 threads · interleave policy · single run</text>
+<line x1="218.0" y1="122" x2="218.0" y2="291" stroke="#d7dee3" stroke-width="1" stroke-dasharray="2 4"/>
+<text x="218.0" y="313" font-size="11" fill="#5c6c78" text-anchor="middle" class="mono">0</text>
+<line x1="354.16666666666663" y1="122" x2="354.16666666666663" y2="291" stroke="#d7dee3" stroke-width="1" stroke-dasharray="2 4"/>
+<text x="354.16666666666663" y="313" font-size="11" fill="#5c6c78" text-anchor="middle" class="mono">100</text>
+<line x1="490.3333333333333" y1="122" x2="490.3333333333333" y2="291" stroke="#d7dee3" stroke-width="1" stroke-dasharray="2 4"/>
+<text x="490.3333333333333" y="313" font-size="11" fill="#5c6c78" text-anchor="middle" class="mono">200</text>
+<line x1="626.5" y1="122" x2="626.5" y2="291" stroke="#d7dee3" stroke-width="1" stroke-dasharray="2 4"/>
+<text x="626.5" y="313" font-size="11" fill="#5c6c78" text-anchor="middle" class="mono">300</text>
+<line x1="762.6666666666666" y1="122" x2="762.6666666666666" y2="291" stroke="#d7dee3" stroke-width="1" stroke-dasharray="2 4"/>
+<text x="762.6666666666666" y="313" font-size="11" fill="#5c6c78" text-anchor="middle" class="mono">400</text>
+<line x1="898.8333333333334" y1="122" x2="898.8333333333334" y2="291" stroke="#d7dee3" stroke-width="1" stroke-dasharray="2 4"/>
+<text x="898.8333333333334" y="313" font-size="11" fill="#5c6c78" text-anchor="middle" class="mono">500</text>
+<line x1="1035.0" y1="122" x2="1035.0" y2="291" stroke="#d7dee3" stroke-width="1" stroke-dasharray="2 4"/>
+<text x="1035.0" y="313" font-size="11" fill="#5c6c78" text-anchor="middle" class="mono">600</text>
+<text x="32" y="150" font-size="14" fill="#172b3a" >Long document</text>
+<line x1="218.00607031" y1="145" x2="910.3118429166666" y2="145" stroke="#b6c1ca" stroke-width="3" />
+<line x1="746.3476022916667" y1="138" x2="746.3476022916667" y2="152" stroke="#16786d" stroke-width="2" />
+<line x1="751.96146937" y1="138" x2="751.96146937" y2="152" stroke="#16786d" stroke-width="2" />
+<line x1="757.35469062" y1="138" x2="757.35469062" y2="152" stroke="#16786d" stroke-width="2" />
+<line x1="762.901609995" y1="138" x2="762.901609995" y2="152" stroke="#16786d" stroke-width="2" />
+<line x1="768.4818343750001" y1="138" x2="768.4818343750001" y2="152" stroke="#16786d" stroke-width="2" />
+<line x1="774.0661995833333" y1="138" x2="774.0661995833333" y2="152" stroke="#16786d" stroke-width="2" />
+<line x1="779.4802992683333" y1="138" x2="779.4802992683333" y2="152" stroke="#16786d" stroke-width="2" />
+<line x1="783.736131245" y1="138" x2="783.736131245" y2="152" stroke="#16786d" stroke-width="2" />
+<line x1="787.2327210366667" y1="138" x2="787.2327210366667" y2="152" stroke="#16786d" stroke-width="2" />
+<line x1="790.3708520783333" y1="138" x2="790.3708520783333" y2="152" stroke="#16786d" stroke-width="2" />
+<line x1="793.3281088516667" y1="138" x2="793.3281088516667" y2="152" stroke="#16786d" stroke-width="2" />
+<line x1="796.6076830183333" y1="138" x2="796.6076830183333" y2="152" stroke="#16786d" stroke-width="2" />
+<line x1="799.7859832266666" y1="138" x2="799.7859832266666" y2="152" stroke="#16786d" stroke-width="2" />
+<line x1="802.8908664533333" y1="138" x2="802.8908664533333" y2="152" stroke="#16786d" stroke-width="2" />
+<line x1="806.17248312" y1="138" x2="806.17248312" y2="152" stroke="#16786d" stroke-width="2" />
+<line x1="809.5710901016666" y1="138" x2="809.5710901016666" y2="152" stroke="#16786d" stroke-width="2" />
+<line x1="812.6806261433333" y1="138" x2="812.6806261433333" y2="152" stroke="#16786d" stroke-width="2" />
+<line x1="815.8307847866666" y1="138" x2="815.8307847866666" y2="152" stroke="#16786d" stroke-width="2" />
+<line x1="819.1305579166666" y1="138" x2="819.1305579166666" y2="152" stroke="#16786d" stroke-width="2" />
+<line x1="822.28480156" y1="138" x2="822.28480156" y2="152" stroke="#16786d" stroke-width="2" />
+<line x1="825.5995516616666" y1="138" x2="825.5995516616666" y2="152" stroke="#16786d" stroke-width="2" />
+<line x1="828.8031570833333" y1="138" x2="828.8031570833333" y2="152" stroke="#16786d" stroke-width="2" />
+<line x1="832.0420514583334" y1="138" x2="832.0420514583334" y2="152" stroke="#16786d" stroke-width="2" />
+<line x1="835.23527281" y1="138" x2="835.23527281" y2="152" stroke="#16786d" stroke-width="2" />
+<line x1="838.169834685" y1="138" x2="838.169834685" y2="152" stroke="#16786d" stroke-width="2" />
+<line x1="841.37707031" y1="138" x2="841.37707031" y2="152" stroke="#16786d" stroke-width="2" />
+<line x1="844.58067437" y1="138" x2="844.58067437" y2="152" stroke="#16786d" stroke-width="2" />
+<line x1="847.4775643749999" y1="138" x2="847.4775643749999" y2="152" stroke="#16786d" stroke-width="2" />
+<line x1="850.49382625" y1="138" x2="850.49382625" y2="152" stroke="#16786d" stroke-width="2" />
+<line x1="853.8116401016666" y1="138" x2="853.8116401016666" y2="152" stroke="#16786d" stroke-width="2" />
+<line x1="856.9998123933333" y1="138" x2="856.9998123933333" y2="152" stroke="#16786d" stroke-width="2" />
+<line x1="859.92189187" y1="138" x2="859.92189187" y2="152" stroke="#16786d" stroke-width="2" />
+<line x1="863.0421510366667" y1="138" x2="863.0421510366667" y2="152" stroke="#16786d" stroke-width="2" />
+<line x1="866.2719113516667" y1="138" x2="866.2719113516667" y2="152" stroke="#16786d" stroke-width="2" />
+<line x1="869.2251389533334" y1="138" x2="869.2251389533334" y2="152" stroke="#16786d" stroke-width="2" />
+<line x1="872.2126928099999" y1="138" x2="872.2126928099999" y2="152" stroke="#16786d" stroke-width="2" />
+<line x1="875.393318745" y1="138" x2="875.393318745" y2="152" stroke="#16786d" stroke-width="2" />
+<line x1="878.5254366666667" y1="138" x2="878.5254366666667" y2="152" stroke="#16786d" stroke-width="2" />
+<line x1="881.6784316616667" y1="138" x2="881.6784316616667" y2="152" stroke="#16786d" stroke-width="2" />
+<line x1="884.8943479116666" y1="138" x2="884.8943479116666" y2="152" stroke="#16786d" stroke-width="2" />
+<line x1="888.16365375" y1="138" x2="888.16365375" y2="152" stroke="#16786d" stroke-width="2" />
+<line x1="891.1943833333333" y1="138" x2="891.1943833333333" y2="152" stroke="#16786d" stroke-width="2" />
+<line x1="894.19101406" y1="138" x2="894.19101406" y2="152" stroke="#16786d" stroke-width="2" />
+<line x1="897.2484663516666" y1="138" x2="897.2484663516666" y2="152" stroke="#16786d" stroke-width="2" />
+<line x1="900.6990998933334" y1="138" x2="900.6990998933334" y2="152" stroke="#16786d" stroke-width="2" />
+<line x1="903.8312164533334" y1="138" x2="903.8312164533334" y2="152" stroke="#16786d" stroke-width="2" />
+<line x1="906.8401035416666" y1="138" x2="906.8401035416666" y2="152" stroke="#16786d" stroke-width="2" />
+<line x1="910.2208372866666" y1="138" x2="910.2208372866666" y2="152" stroke="#16786d" stroke-width="2" />
+<text x="32" y="194" font-size="14" fill="#172b3a" >Short question</text>
+<line x1="218.00788541166668" y1="189" x2="746.342155625" y2="189" stroke="#b6c1ca" stroke-width="3" />
+<line x1="285.73968270833336" y1="182" x2="285.73968270833336" y2="196" stroke="#16786d" stroke-width="2" />
+<line x1="343.0563177083334" y1="182" x2="343.0563177083334" y2="196" stroke="#16786d" stroke-width="2" />
+<line x1="403.252196875" y1="182" x2="403.252196875" y2="196" stroke="#16786d" stroke-width="2" />
+<line x1="468.672450625" y1="182" x2="468.672450625" y2="196" stroke="#16786d" stroke-width="2" />
+<line x1="535.7784477083334" y1="182" x2="535.7784477083334" y2="196" stroke="#16786d" stroke-width="2" />
+<line x1="607.019088435" y1="182" x2="607.019088435" y2="196" stroke="#16786d" stroke-width="2" />
+<line x1="680.198742495" y1="182" x2="680.198742495" y2="196" stroke="#16786d" stroke-width="2" />
+<text x="32" y="238" font-size="14" fill="#172b3a" >Original question</text>
+<line x1="218.00799979166666" y1="233" x2="403.4230288516667" y2="233" stroke="#b6c1ca" stroke-width="3" />
+<line x1="285.75363979166667" y1="226" x2="285.75363979166667" y2="240" stroke="#16786d" stroke-width="2" />
+<line x1="343.06670041666666" y1="226" x2="343.06670041666666" y2="240" stroke="#16786d" stroke-width="2" />
+<line x1="403.24050832833336" y1="226" x2="403.24050832833336" y2="240" stroke="#16786d" stroke-width="2" />
+<line x1="398.4230288516667" y1="228" x2="408.4230288516667" y2="238" stroke="#ba5934" stroke-width="2" />
+<line x1="398.4230288516667" y1="238" x2="408.4230288516667" y2="228" stroke="#ba5934" stroke-width="2" />
+<text x="32" y="282" font-size="14" fill="#172b3a" >Replacement</text>
+<line x1="403.25055062" y1="277" x2="779.4420023933334" y2="277" stroke="#b6c1ca" stroke-width="3" />
+<line x1="468.6874289583333" y1="270" x2="468.6874289583333" y2="284" stroke="#16786d" stroke-width="2" />
+<line x1="535.79041812" y1="270" x2="535.79041812" y2="284" stroke="#16786d" stroke-width="2" />
+<line x1="607.0018973933334" y1="270" x2="607.0018973933334" y2="284" stroke="#16786d" stroke-width="2" />
+<line x1="680.2106570783333" y1="270" x2="680.2106570783333" y2="284" stroke="#16786d" stroke-width="2" />
+<line x1="746.34567281" y1="270" x2="746.34567281" y2="284" stroke="#16786d" stroke-width="2" />
+<line x1="751.9759370783333" y1="270" x2="751.9759370783333" y2="284" stroke="#16786d" stroke-width="2" />
+<line x1="757.3431736433333" y1="270" x2="757.3431736433333" y2="284" stroke="#16786d" stroke-width="2" />
+<line x1="762.9164181200001" y1="270" x2="762.9164181200001" y2="284" stroke="#16786d" stroke-width="2" />
+<line x1="768.4726989533333" y1="270" x2="768.4726989533333" y2="284" stroke="#16786d" stroke-width="2" />
+<line x1="774.0785104116667" y1="270" x2="774.0785104116667" y2="284" stroke="#16786d" stroke-width="2" />
+<text x="1054" y="313" font-size="11" fill="#5c6c78" >ms</text>
+<line x1="32" y1="342" x2="60" y2="342" stroke="#b6c1ca" stroke-width="3" />
+<text x="69" y="347" font-size="12" fill="#5c6c78" >Request lifetime</text>
+<line x1="249" y1="335" x2="249" y2="349" stroke="#16786d" stroke-width="2" />
+<text x="261" y="347" font-size="12" fill="#5c6c78" >Output token</text>
+<text x="422" y="347" font-size="18" fill="#ba5934" >×</text>
+<text x="441" y="347" font-size="12" fill="#5c6c78" >Cancellation acknowledged</text>
+<text x="32" y="376" font-size="12" fill="#5c6c78" >Functional smoke test; timings are observations from this run, not a throughput or latency claim.</text>
+</svg>

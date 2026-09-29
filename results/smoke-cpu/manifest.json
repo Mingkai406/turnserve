@@ -1,0 +1,43 @@
+{
+  "kind": "functional-smoke-test",
+  "recorded_date": "2026-09-29",
+  "source_files_sha256": {
+    "CMakeLists.txt": "0ac9817f83afe63a5f1eac32480eedb1f7c34b58edbf27701252f5896d9f2fd3",
+    "apps/replay.cpp": "da667ff6aeba0294b77ad2fc53c60e8983c86e143c8c1915e10452d1f2e21ec0",
+    "include/turnserve/backend.hpp": "8753c61d5a7a129e4926c82c01f5115e1d5acff7b075e3139e9cdb451b520fa5",
+    "include/turnserve/runtime.hpp": "fb8c4481b573616e44f909ebeb8a4c752233ea898344047c981a48b4162f23ef",
+    "src/llama_backend.cpp": "de8b9a3f1c6ceca59a0e5b95388a6ad74d9f5c422ecaaa9fcd2f1a7c689501a2",
+    "src/runtime.cpp": "b98ba985a53f2d8ed291660f4f936f04a03d4eaa594dc80545da01a75997141a",
+    "src/synthetic_backend.cpp": "46ecf50a848da1516fe387bc3548288abbc3d9d7f885727ab9d9401a0cbd9781"
+  },
+  "llama_commit": "19e28a27702117d8f2eb16b825b9a308111f67d9",
+  "model": "bartowski/SmolLM2-135M-Instruct-GGUF",
+  "model_revision": "09816acd5d99df7be770d85ea30822623dab342c",
+  "model_file": "SmolLM2-135M-Instruct-Q4_K_M.gguf",
+  "model_sha256": "2e8040ceae7815abe0dcb3540b9995eaa1fa0d2ca9e797d0a635ae4433c68c2d",
+  "os": "Darwin",
+  "os_version": "26.4.1",
+  "architecture": "arm64",
+  "cpu_model": null,
+  "ram_bytes": null,
+  "hardware_note": "CPU model and RAM not collected; no cross-machine performance inference.",
+  "compiler": "Apple clang version 21.0.0 (clang-2100.0.123.102)",
+  "build": "Release, TURNSERVE_LLAMA=ON, GGML_NATIVE=OFF, CPU only, Accelerate available",
+  "threads": 4,
+  "slots": 4,
+  "context_tokens_per_session": 2048,
+  "batch_tokens": 128,
+  "prefill_chunk": 64,
+  "sampling": "greedy",
+  "trials_per_policy": 1,
+  "warmup_trials": 0,
+  "arrival": "three initial submissions; replacement after third token of original question",
+  "clock": "monotonic milliseconds since runtime creation; excludes model load",
+  "backend_logs": "not included; local environment paths removed by omission",
+  "limitations": [
+    "not a controlled benchmark",
+    "no external baseline",
+    "uncontrolled machine load",
+    "small repetitive workload"
+  ]
+}

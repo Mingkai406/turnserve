@@ -1,0 +1,14 @@
+TurnServe uses llama.cpp as an optional build-time dependency, pinned in CMakeLists.txt.
+llama.cpp is distributed under the MIT license. Its source and license remain in
+the fetched dependency; it is not vendored into this repository.
+https://github.com/ggml-org/llama.cpp
+
+The smoke-test model is SmolLM2-135M-Instruct, originally published by
+Hugging Face (HuggingFaceTB). The download script selects bartowski's GGUF
+conversion at a fixed revision. Model weights are not distributed in this repo.
+Review the original model and conversion model cards before reuse:
+https://huggingface.co/HuggingFaceTB/SmolLM2-135M-Instruct
+https://huggingface.co/bartowski/SmolLM2-135M-Instruct-GGUF
+
+The diagrams in docs/assets are original programmatically drawn SVGs.
+The recorded-run figure is generated from the checked-in inference trace.
