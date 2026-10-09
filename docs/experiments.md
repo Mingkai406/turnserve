@@ -6,10 +6,18 @@
 
 There are no speedup claims. Individual TTFT values are observations, not estimates of population p95. Model load and context setup precede the runtime clock. CPU model and memory capacity were not recorded, and thermal/load conditions were not controlled. These limits make the checked-in artifacts unsuitable for cross-machine performance comparison.
 
-## Controlled study to implement next
+## Fixed-arrival study now available
 
-1. Accept versioned workload files instead of hard-coded prompts. Record tokenizer-derived input lengths and requested output caps separately from actual output lengths.
-2. Replay fixed open-loop arrivals for load tests; use completion plus think-time for normal multi-turn conversations. Explicitly distinguish interruption events from normal next turns.
+`results/fixed-arrival` adds a separate, controlled CPU experiment: workload-file ingestion,
+open-loop arrivals, three repetitions per policy, planned-arrival TTFT/completion latency,
+dispatch lag, and complete outcome accounting. Its report fingerprints the workload, model
+and binary. Model loading is excluded and first inference is cold. The small workload favors
+FIFO; it is not a population-level p95 or upstream-server comparison.
+
+## Broader study still needed
+
+1. Extend the current TSV workload with tokenizer-derived input lengths and requested output caps reported separately from actual output lengths.
+2. Keep the implemented fixed open-loop arrivals for load tests; add completion plus think-time for normal multi-turn conversations and explicit interruption schedules.
 3. Compare short-only, mixed-length, burst, and interrupt-heavy workloads. Tune on separate pilot workloads and freeze parameters before measuring.
 4. Use identical model weights, CPU/GPU backend, thread count, context capacity, sampling settings and request trace for internal policy comparisons. Add pinned native llama-server as a reference with its settings documented.
 5. Warm up and run repeated trials. Keep raw per-request events and outcome counts. Report queue-inclusive TTFT, per-request token gaps, completion latency, throughput, maximum wait, cancellation latency and peak memory.

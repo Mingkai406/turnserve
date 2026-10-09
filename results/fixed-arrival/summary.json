@@ -1,0 +1,944 @@
+{
+  "measurement": "CPU model inference",
+  "environment": "macOS-26.4.1-arm64-arm-64bit-Mach-O",
+  "threads": 2,
+  "workload_sha256": "aa3beee123bd71c710947f5238f8c170bf699c9ff85ca7506967fb544ebc7d73",
+  "binary_sha256": "e359de95e0acf87d052d3a84f46c86dcd0ddc7fe92d8befeff60b869e89f5a81",
+  "model_sha256": "2e8040ceae7815abe0dcb3540b9995eaa1fa0d2ca9e797d0a635ae4433c68c2d",
+  "timing": "From planned arrival; model loading excluded; first inference cold; fresh process per run",
+  "aggregation": "Per-run metrics; medians across repeats, no pooled request confidence intervals",
+  "runs": [
+    {
+      "policy": "fifo",
+      "repeat": 0,
+      "offered": 12,
+      "completed": 12,
+      "outcomes": {
+        "completed": 12
+      },
+      "completion_rate": 1.0,
+      "deadline_ms": 1000,
+      "deadline_success_rate": 0.25,
+      "completed_latency_p95_ms": 2138.657917,
+      "completed_ttft_p95_ms": 2109.35775,
+      "dispatch_lag_p95_ms": 1.4648750000000064,
+      "requests": [
+        {
+          "session": "request-0",
+          "status": "completed",
+          "dispatch_lag_ms": 0.03475,
+          "ttft_ms": 339.031209,
+          "latency_ms": 490.860917
+        },
+        {
+          "session": "request-1",
+          "status": "completed",
+          "dispatch_lag_ms": 0.20670900000000003,
+          "ttft_ms": 486.476542,
+          "latency_ms": 513.236
+        },
+        {
+          "session": "request-2",
+          "status": "completed",
+          "dispatch_lag_ms": 0.3474999999999966,
+          "ttft_ms": 509.334834,
+          "latency_ms": 536.297959
+        },
+        {
+          "session": "request-3",
+          "status": "completed",
+          "dispatch_lag_ms": 0.4781669999999991,
+          "ttft_ms": 844.4595,
+          "latency_ms": 1010.8429590000001
+        },
+        {
+          "session": "request-4",
+          "status": "completed",
+          "dispatch_lag_ms": 0.5830839999999995,
+          "ttft_ms": 1007.5602919999999,
+          "latency_ms": 1036.309584
+        },
+        {
+          "session": "request-5",
+          "status": "completed",
+          "dispatch_lag_ms": 0.6810000000000116,
+          "ttft_ms": 1032.9575,
+          "latency_ms": 1060.4105
+        },
+        {
+          "session": "request-6",
+          "status": "completed",
+          "dispatch_lag_ms": 0.7773339999999962,
+          "ttft_ms": 1372.548292,
+          "latency_ms": 1528.710375
+        },
+        {
+          "session": "request-7",
+          "status": "completed",
+          "dispatch_lag_ms": 0.9037089999999921,
+          "ttft_ms": 1524.372792,
+          "latency_ms": 1550.259792
+        },
+        {
+          "session": "request-8",
+          "status": "completed",
+          "dispatch_lag_ms": 1.0339170000000024,
+          "ttft_ms": 1545.875875,
+          "latency_ms": 1646.808417
+        },
+        {
+          "session": "request-9",
+          "status": "completed",
+          "dispatch_lag_ms": 1.1705420000000117,
+          "ttft_ms": 1945.6349169999999,
+          "latency_ms": 2090.75425
+        },
+        {
+          "session": "request-10",
+          "status": "completed",
+          "dispatch_lag_ms": 1.3220420000000104,
+          "ttft_ms": 2086.344917,
+          "latency_ms": 2112.28875
+        },
+        {
+          "session": "request-11",
+          "status": "completed",
+          "dispatch_lag_ms": 1.4648750000000064,
+          "ttft_ms": 2109.35775,
+          "latency_ms": 2138.657917
+        }
+      ]
+    },
+    {
+      "policy": "round-robin",
+      "repeat": 0,
+      "offered": 12,
+      "completed": 12,
+      "outcomes": {
+        "completed": 12
+      },
+      "completion_rate": 1.0,
+      "deadline_ms": 1000,
+      "deadline_success_rate": 0.3333333333333333,
+      "completed_latency_p95_ms": 2495.127292,
+      "completed_ttft_p95_ms": 2238.904708,
+      "dispatch_lag_p95_ms": 1.376417,
+      "requests": [
+        {
+          "session": "request-0",
+          "status": "completed",
+          "dispatch_lag_ms": 0.037917,
+          "ttft_ms": 639.82475,
+          "latency_ms": 2120.352917
+        },
+        {
+          "session": "request-1",
+          "status": "completed",
+          "dispatch_lag_ms": 1.376417,
+          "ttft_ms": 66.650583,
+          "latency_ms": 768.479458
+        },
+        {
+          "session": "request-2",
+          "status": "completed",
+          "dispatch_lag_ms": 0.02575000000000216,
+          "ttft_ms": 110.10008300000001,
+          "latency_ms": 705.22175
+        },
+        {
+          "session": "request-3",
+          "status": "completed",
+          "dispatch_lag_ms": 0.1875830000000036,
+          "ttft_ms": 619.12125,
+          "latency_ms": 2144.793375
+        },
+        {
+          "session": "request-4",
+          "status": "completed",
+          "dispatch_lag_ms": 0.34816700000000367,
+          "ttft_ms": 678.462583,
+          "latency_ms": 807.386792
+        },
+        {
+          "session": "request-5",
+          "status": "completed",
+          "dispatch_lag_ms": 0.4889579999999967,
+          "ttft_ms": 681.409333,
+          "latency_ms": 856.261083
+        },
+        {
+          "session": "request-6",
+          "status": "completed",
+          "dispatch_lag_ms": 0.6444170000000042,
+          "ttft_ms": 1385.892542,
+          "latency_ms": 2495.127292
+        },
+        {
+          "session": "request-7",
+          "status": "completed",
+          "dispatch_lag_ms": 0.8064579999999921,
+          "ttft_ms": 887.03125,
+          "latency_ms": 1418.51875
+        },
+        {
+          "session": "request-8",
+          "status": "completed",
+          "dispatch_lag_ms": 0.939707999999996,
+          "ttft_ms": 1423.38725,
+          "latency_ms": 1536.744875
+        },
+        {
+          "session": "request-9",
+          "status": "completed",
+          "dispatch_lag_ms": 1.0774170000000254,
+          "ttft_ms": 2238.904708,
+          "latency_ms": 2489.612833
+        },
+        {
+          "session": "request-10",
+          "status": "completed",
+          "dispatch_lag_ms": 1.209292000000005,
+          "ttft_ms": 1934.7249579999998,
+          "latency_ms": 2286.2165
+        },
+        {
+          "session": "request-11",
+          "status": "completed",
+          "dispatch_lag_ms": 1.3757499999999823,
+          "ttft_ms": 2006.545708,
+          "latency_ms": 2264.61225
+        }
+      ]
+    },
+    {
+      "policy": "interleave",
+      "repeat": 0,
+      "offered": 12,
+      "completed": 12,
+      "outcomes": {
+        "completed": 12
+      },
+      "completion_rate": 1.0,
+      "deadline_ms": 1000,
+      "deadline_success_rate": 0.3333333333333333,
+      "completed_latency_p95_ms": 2525.976875,
+      "completed_ttft_p95_ms": 2265.807875,
+      "dispatch_lag_p95_ms": 1.4116660000000252,
+      "requests": [
+        {
+          "session": "request-0",
+          "status": "completed",
+          "dispatch_lag_ms": 0.032458,
+          "ttft_ms": 656.168875,
+          "latency_ms": 2314.724375
+        },
+        {
+          "session": "request-1",
+          "status": "completed",
+          "dispatch_lag_ms": 0.9799159999999993,
+          "ttft_ms": 69.393666,
+          "latency_ms": 733.149083
+        },
+        {
+          "session": "request-2",
+          "status": "completed",
+          "dispatch_lag_ms": 1.124875000000003,
+          "ttft_ms": 114.10537500000001,
+          "latency_ms": 736.45175
+        },
+        {
+          "session": "request-3",
+          "status": "completed",
+          "dispatch_lag_ms": 0.9784999999999968,
+          "ttft_ms": 635.044708,
+          "latency_ms": 2350.60275
+        },
+        {
+          "session": "request-4",
+          "status": "completed",
+          "dispatch_lag_ms": 1.1089580000000012,
+          "ttft_ms": 676.456,
+          "latency_ms": 802.615375
+        },
+        {
+          "session": "request-5",
+          "status": "completed",
+          "dispatch_lag_ms": 1.2518750000000125,
+          "ttft_ms": 679.601041,
+          "latency_ms": 858.195125
+        },
+        {
+          "session": "request-6",
+          "status": "completed",
+          "dispatch_lag_ms": 1.3931249999999977,
+          "ttft_ms": 1393.542333,
+          "latency_ms": 2525.976875
+        },
+        {
+          "session": "request-7",
+          "status": "completed",
+          "dispatch_lag_ms": 0.035333000000008496,
+          "ttft_ms": 893.035083,
+          "latency_ms": 1425.612708
+        },
+        {
+          "session": "request-8",
+          "status": "completed",
+          "dispatch_lag_ms": 0.19149999999999068,
+          "ttft_ms": 1430.369625,
+          "latency_ms": 1545.007791
+        },
+        {
+          "session": "request-9",
+          "status": "completed",
+          "dispatch_lag_ms": 1.4116660000000252,
+          "ttft_ms": 2265.807875,
+          "latency_ms": 2521.527833
+        },
+        {
+          "session": "request-10",
+          "status": "completed",
+          "dispatch_lag_ms": 0.0464579999999728,
+          "ttft_ms": 2140.605958,
+          "latency_ms": 2331.859166
+        },
+        {
+          "session": "request-11",
+          "status": "completed",
+          "dispatch_lag_ms": 0.18562500000001592,
+          "ttft_ms": 2205.808875,
+          "latency_ms": 2310.095125
+        }
+      ]
+    },
+    {
+      "policy": "round-robin",
+      "repeat": 1,
+      "offered": 12,
+      "completed": 12,
+      "outcomes": {
+        "completed": 12
+      },
+      "completion_rate": 1.0,
+      "deadline_ms": 1000,
+      "deadline_success_rate": 0.3333333333333333,
+      "completed_latency_p95_ms": 2495.74675,
+      "completed_ttft_p95_ms": 2239.875083,
+      "dispatch_lag_p95_ms": 1.0327080000000137,
+      "requests": [
+        {
+          "session": "request-0",
+          "status": "completed",
+          "dispatch_lag_ms": 0.035083,
+          "ttft_ms": 637.896125,
+          "latency_ms": 2121.633042
+        },
+        {
+          "session": "request-1",
+          "status": "completed",
+          "dispatch_lag_ms": 0.19291700000000134,
+          "ttft_ms": 65.093375,
+          "latency_ms": 768.108542
+        },
+        {
+          "session": "request-2",
+          "status": "completed",
+          "dispatch_lag_ms": 0.1058749999999975,
+          "ttft_ms": 107.82708299999999,
+          "latency_ms": 704.749833
+        },
+        {
+          "session": "request-3",
+          "status": "completed",
+          "dispatch_lag_ms": 0.25791700000000617,
+          "ttft_ms": 617.97675,
+          "latency_ms": 2145.752042
+        },
+        {
+          "session": "request-4",
+          "status": "completed",
+          "dispatch_lag_ms": 0.3913749999999965,
+          "ttft_ms": 678.09,
+          "latency_ms": 805.961333
+        },
+        {
+          "session": "request-5",
+          "status": "completed",
+          "dispatch_lag_ms": 0.5381669999999872,
+          "ttft_ms": 681.262083,
+          "latency_ms": 854.731708
+        },
+        {
+          "session": "request-6",
+          "status": "completed",
+          "dispatch_lag_ms": 0.70474999999999,
+          "ttft_ms": 1387.262208,
+          "latency_ms": 2495.74675
+        },
+        {
+          "session": "request-7",
+          "status": "completed",
+          "dispatch_lag_ms": 0.8466249999999889,
+          "ttft_ms": 887.7855830000001,
+          "latency_ms": 1420.048875
+        },
+        {
+          "session": "request-8",
+          "status": "completed",
+          "dispatch_lag_ms": 0.9949579999999969,
+          "ttft_ms": 1424.936167,
+          "latency_ms": 1539.990542
+        },
+        {
+          "session": "request-9",
+          "status": "completed",
+          "dispatch_lag_ms": 0.746167000000014,
+          "ttft_ms": 2239.875083,
+          "latency_ms": 2490.450875
+        },
+        {
+          "session": "request-10",
+          "status": "completed",
+          "dispatch_lag_ms": 0.891666999999984,
+          "ttft_ms": 1935.69225,
+          "latency_ms": 2287.343542
+        },
+        {
+          "session": "request-11",
+          "status": "completed",
+          "dispatch_lag_ms": 1.0327080000000137,
+          "ttft_ms": 2006.9524580000002,
+          "latency_ms": 2265.678958
+        }
+      ]
+    },
+    {
+      "policy": "interleave",
+      "repeat": 1,
+      "offered": 12,
+      "completed": 12,
+      "outcomes": {
+        "completed": 12
+      },
+      "completion_rate": 1.0,
+      "deadline_ms": 1000,
+      "deadline_success_rate": 0.3333333333333333,
+      "completed_latency_p95_ms": 2525.122042,
+      "completed_ttft_p95_ms": 2265.64375,
+      "dispatch_lag_p95_ms": 1.130375000000015,
+      "requests": [
+        {
+          "session": "request-0",
+          "status": "completed",
+          "dispatch_lag_ms": 0.036917,
+          "ttft_ms": 653.153333,
+          "latency_ms": 2314.664958
+        },
+        {
+          "session": "request-1",
+          "status": "completed",
+          "dispatch_lag_ms": 0.1958750000000009,
+          "ttft_ms": 64.912625,
+          "latency_ms": 729.474333
+        },
+        {
+          "session": "request-2",
+          "status": "completed",
+          "dispatch_lag_ms": 0.322499999999998,
+          "ttft_ms": 110.33675,
+          "latency_ms": 732.667792
+        },
+        {
+          "session": "request-3",
+          "status": "completed",
+          "dispatch_lag_ms": 0.07858299999999474,
+          "ttft_ms": 632.0085,
+          "latency_ms": 2350.56275
+        },
+        {
+          "session": "request-4",
+          "status": "completed",
+          "dispatch_lag_ms": 0.22879199999999855,
+          "ttft_ms": 672.671792,
+          "latency_ms": 797.757292
+        },
+        {
+          "session": "request-5",
+          "status": "completed",
+          "dispatch_lag_ms": 0.36383299999999963,
+          "ttft_ms": 675.735958,
+          "latency_ms": 852.794292
+        },
+        {
+          "session": "request-6",
+          "status": "completed",
+          "dispatch_lag_ms": 0.5660000000000025,
+          "ttft_ms": 1390.218625,
+          "latency_ms": 2525.122042
+        },
+        {
+          "session": "request-7",
+          "status": "completed",
+          "dispatch_lag_ms": 0.5203329999999937,
+          "ttft_ms": 887.6620829999999,
+          "latency_ms": 1422.779917
+        },
+        {
+          "session": "request-8",
+          "status": "completed",
+          "dispatch_lag_ms": 0.6667500000000075,
+          "ttft_ms": 1427.670042,
+          "latency_ms": 1543.017583
+        },
+        {
+          "session": "request-9",
+          "status": "completed",
+          "dispatch_lag_ms": 0.8161670000000072,
+          "ttft_ms": 2265.64375,
+          "latency_ms": 2523.028083
+        },
+        {
+          "session": "request-10",
+          "status": "completed",
+          "dispatch_lag_ms": 0.978917000000024,
+          "ttft_ms": 2140.565292,
+          "latency_ms": 2330.924708
+        },
+        {
+          "session": "request-11",
+          "status": "completed",
+          "dispatch_lag_ms": 1.130375000000015,
+          "ttft_ms": 2205.644833,
+          "latency_ms": 2309.1075
+        }
+      ]
+    },
+    {
+      "policy": "fifo",
+      "repeat": 1,
+      "offered": 12,
+      "completed": 12,
+      "outcomes": {
+        "completed": 12
+      },
+      "completion_rate": 1.0,
+      "deadline_ms": 1000,
+      "deadline_success_rate": 0.4166666666666667,
+      "completed_latency_p95_ms": 1993.510209,
+      "completed_ttft_p95_ms": 1967.6952919999999,
+      "dispatch_lag_p95_ms": 1.464084000000014,
+      "requests": [
+        {
+          "session": "request-0",
+          "status": "completed",
+          "dispatch_lag_ms": 0.029084,
+          "ttft_ms": 337.657042,
+          "latency_ms": 480.9485
+        },
+        {
+          "session": "request-1",
+          "status": "completed",
+          "dispatch_lag_ms": 0.17245899999999992,
+          "ttft_ms": 476.540542,
+          "latency_ms": 502.248834
+        },
+        {
+          "session": "request-2",
+          "status": "completed",
+          "dispatch_lag_ms": 0.2839999999999989,
+          "ttft_ms": 497.858334,
+          "latency_ms": 523.56375
+        },
+        {
+          "session": "request-3",
+          "status": "completed",
+          "dispatch_lag_ms": 0.41033400000000597,
+          "ttft_ms": 826.390542,
+          "latency_ms": 969.3146670000001
+        },
+        {
+          "session": "request-4",
+          "status": "completed",
+          "dispatch_lag_ms": 0.20974999999999966,
+          "ttft_ms": 964.9032500000001,
+          "latency_ms": 990.5412920000001
+        },
+        {
+          "session": "request-5",
+          "status": "completed",
+          "dispatch_lag_ms": 1.3350419999999872,
+          "ttft_ms": 986.5211670000001,
+          "latency_ms": 1015.523709
+        },
+        {
+          "session": "request-6",
+          "status": "completed",
+          "dispatch_lag_ms": 1.464084000000014,
+          "ttft_ms": 1319.401042,
+          "latency_ms": 1461.458334
+        },
+        {
+          "session": "request-7",
+          "status": "completed",
+          "dispatch_lag_ms": 0.09329199999999105,
+          "ttft_ms": 1457.047375,
+          "latency_ms": 1482.766125
+        },
+        {
+          "session": "request-8",
+          "status": "completed",
+          "dispatch_lag_ms": 0.2103749999999991,
+          "ttft_ms": 1478.378625,
+          "latency_ms": 1504.093542
+        },
+        {
+          "session": "request-9",
+          "status": "completed",
+          "dispatch_lag_ms": 0.34862500000002683,
+          "ttft_ms": 1807.2679170000001,
+          "latency_ms": 1950.6693340000002
+        },
+        {
+          "session": "request-10",
+          "status": "completed",
+          "dispatch_lag_ms": 0.492334000000028,
+          "ttft_ms": 1946.322209,
+          "latency_ms": 1972.03775
+        },
+        {
+          "session": "request-11",
+          "status": "completed",
+          "dispatch_lag_ms": 0.6196669999999926,
+          "ttft_ms": 1967.6952919999999,
+          "latency_ms": 1993.510209
+        }
+      ]
+    },
+    {
+      "policy": "interleave",
+      "repeat": 2,
+      "offered": 12,
+      "completed": 12,
+      "outcomes": {
+        "completed": 12
+      },
+      "completion_rate": 1.0,
+      "deadline_ms": 1000,
+      "deadline_success_rate": 0.3333333333333333,
+      "completed_latency_p95_ms": 2528.679166,
+      "completed_ttft_p95_ms": 2262.743333,
+      "dispatch_lag_p95_ms": 1.4217909999999847,
+      "requests": [
+        {
+          "session": "request-0",
+          "status": "completed",
+          "dispatch_lag_ms": 0.033958,
+          "ttft_ms": 653.598,
+          "latency_ms": 2311.58825
+        },
+        {
+          "session": "request-1",
+          "status": "completed",
+          "dispatch_lag_ms": 0.18183300000000102,
+          "ttft_ms": 64.000041,
+          "latency_ms": 731.542916
+        },
+        {
+          "session": "request-2",
+          "status": "completed",
+          "dispatch_lag_ms": 0.32320800000000105,
+          "ttft_ms": 108.92079100000001,
+          "latency_ms": 734.894541
+        },
+        {
+          "session": "request-3",
+          "status": "completed",
+          "dispatch_lag_ms": 0.47654099999999744,
+          "ttft_ms": 633.688291,
+          "latency_ms": 2347.581333
+        },
+        {
+          "session": "request-4",
+          "status": "completed",
+          "dispatch_lag_ms": 0.6354579999999999,
+          "ttft_ms": 674.898708,
+          "latency_ms": 800.993916
+        },
+        {
+          "session": "request-5",
+          "status": "completed",
+          "dispatch_lag_ms": 0.7855409999999949,
+          "ttft_ms": 678.075833,
+          "latency_ms": 856.405916
+        },
+        {
+          "session": "request-6",
+          "status": "completed",
+          "dispatch_lag_ms": 0.9521660000000054,
+          "ttft_ms": 1392.238375,
+          "latency_ms": 2528.679166
+        },
+        {
+          "session": "request-7",
+          "status": "completed",
+          "dispatch_lag_ms": 1.1055000000000064,
+          "ttft_ms": 891.0979580000001,
+          "latency_ms": 1424.333333
+        },
+        {
+          "session": "request-8",
+          "status": "completed",
+          "dispatch_lag_ms": 1.2433749999999861,
+          "ttft_ms": 1429.095916,
+          "latency_ms": 1543.50025
+        },
+        {
+          "session": "request-9",
+          "status": "completed",
+          "dispatch_lag_ms": 1.4217909999999847,
+          "ttft_ms": 2262.743333,
+          "latency_ms": 2526.679625
+        },
+        {
+          "session": "request-10",
+          "status": "completed",
+          "dispatch_lag_ms": 0.05608300000000099,
+          "ttft_ms": 2137.584291,
+          "latency_ms": 2332.158625
+        },
+        {
+          "session": "request-11",
+          "status": "completed",
+          "dispatch_lag_ms": 0.1857909999999947,
+          "ttft_ms": 2202.744291,
+          "latency_ms": 2310.589833
+        }
+      ]
+    },
+    {
+      "policy": "fifo",
+      "repeat": 2,
+      "offered": 12,
+      "completed": 12,
+      "outcomes": {
+        "completed": 12
+      },
+      "completion_rate": 1.0,
+      "deadline_ms": 1000,
+      "deadline_success_rate": 0.4166666666666667,
+      "completed_latency_p95_ms": 2006.6849160000002,
+      "completed_ttft_p95_ms": 1980.952875,
+      "dispatch_lag_p95_ms": 1.256208000000015,
+      "requests": [
+        {
+          "session": "request-0",
+          "status": "completed",
+          "dispatch_lag_ms": 0.033958,
+          "ttft_ms": 339.572375,
+          "latency_ms": 482.768208
+        },
+        {
+          "session": "request-1",
+          "status": "completed",
+          "dispatch_lag_ms": 0.19549999999999912,
+          "ttft_ms": 478.393208,
+          "latency_ms": 504.11462500000005
+        },
+        {
+          "session": "request-2",
+          "status": "completed",
+          "dispatch_lag_ms": 0.3288749999999965,
+          "ttft_ms": 499.733875,
+          "latency_ms": 525.470208
+        },
+        {
+          "session": "request-3",
+          "status": "completed",
+          "dispatch_lag_ms": 0.43625000000000114,
+          "ttft_ms": 828.865041,
+          "latency_ms": 973.602958
+        },
+        {
+          "session": "request-4",
+          "status": "completed",
+          "dispatch_lag_ms": 0.5997080000000068,
+          "ttft_ms": 969.3969999999999,
+          "latency_ms": 995.532166
+        },
+        {
+          "session": "request-5",
+          "status": "completed",
+          "dispatch_lag_ms": 0.7571660000000122,
+          "ttft_ms": 991.1801660000001,
+          "latency_ms": 1017.0837079999999
+        },
+        {
+          "session": "request-6",
+          "status": "completed",
+          "dispatch_lag_ms": 0.5777909999999906,
+          "ttft_ms": 1320.8885,
+          "latency_ms": 1469.887916
+        },
+        {
+          "session": "request-7",
+          "status": "completed",
+          "dispatch_lag_ms": 0.7021249999999952,
+          "ttft_ms": 1466.332291,
+          "latency_ms": 1493.482166
+        },
+        {
+          "session": "request-8",
+          "status": "completed",
+          "dispatch_lag_ms": 0.8574580000000083,
+          "ttft_ms": 1489.293291,
+          "latency_ms": 1515.260333
+        },
+        {
+          "session": "request-9",
+          "status": "completed",
+          "dispatch_lag_ms": 0.9794999999999732,
+          "ttft_ms": 1819.3435829999999,
+          "latency_ms": 1963.9885410000002
+        },
+        {
+          "session": "request-10",
+          "status": "completed",
+          "dispatch_lag_ms": 1.1138329999999996,
+          "ttft_ms": 1959.612791,
+          "latency_ms": 1985.3384999999998
+        },
+        {
+          "session": "request-11",
+          "status": "completed",
+          "dispatch_lag_ms": 1.256208000000015,
+          "ttft_ms": 1980.952875,
+          "latency_ms": 2006.6849160000002
+        }
+      ]
+    },
+    {
+      "policy": "round-robin",
+      "repeat": 2,
+      "offered": 12,
+      "completed": 12,
+      "outcomes": {
+        "completed": 12
+      },
+      "completion_rate": 1.0,
+      "deadline_ms": 1000,
+      "deadline_success_rate": 0.3333333333333333,
+      "completed_latency_p95_ms": 2490.14925,
+      "completed_ttft_p95_ms": 2233.551042,
+      "dispatch_lag_p95_ms": 1.2821250000000077,
+      "requests": [
+        {
+          "session": "request-0",
+          "status": "completed",
+          "dispatch_lag_ms": 0.031958,
+          "ttft_ms": 638.0745,
+          "latency_ms": 2115.854167
+        },
+        {
+          "session": "request-1",
+          "status": "completed",
+          "dispatch_lag_ms": 0.1684580000000011,
+          "ttft_ms": 64.031625,
+          "latency_ms": 766.330792
+        },
+        {
+          "session": "request-2",
+          "status": "completed",
+          "dispatch_lag_ms": 0.31700000000000017,
+          "ttft_ms": 107.02674999999999,
+          "latency_ms": 703.142875
+        },
+        {
+          "session": "request-3",
+          "status": "completed",
+          "dispatch_lag_ms": 0.46358299999999986,
+          "ttft_ms": 616.983417,
+          "latency_ms": 2139.886792
+        },
+        {
+          "session": "request-4",
+          "status": "completed",
+          "dispatch_lag_ms": 0.6013750000000044,
+          "ttft_ms": 676.314333,
+          "latency_ms": 801.577208
+        },
+        {
+          "session": "request-5",
+          "status": "completed",
+          "dispatch_lag_ms": 0.7247500000000002,
+          "ttft_ms": 679.244125,
+          "latency_ms": 850.014542
+        },
+        {
+          "session": "request-6",
+          "status": "completed",
+          "dispatch_lag_ms": 0.8845420000000104,
+          "ttft_ms": 1382.965375,
+          "latency_ms": 2490.14925
+        },
+        {
+          "session": "request-7",
+          "status": "completed",
+          "dispatch_lag_ms": 1.0407920000000104,
+          "ttft_ms": 880.4365829999999,
+          "latency_ms": 1415.560375
+        },
+        {
+          "session": "request-8",
+          "status": "completed",
+          "dispatch_lag_ms": 1.1754170000000101,
+          "ttft_ms": 1420.484708,
+          "latency_ms": 1534.203958
+        },
+        {
+          "session": "request-9",
+          "status": "completed",
+          "dispatch_lag_ms": 1.0068749999999795,
+          "ttft_ms": 2233.551042,
+          "latency_ms": 2484.602
+        },
+        {
+          "session": "request-10",
+          "status": "completed",
+          "dispatch_lag_ms": 1.1583330000000274,
+          "ttft_ms": 1929.825958,
+          "latency_ms": 2280.811125
+        },
+        {
+          "session": "request-11",
+          "status": "completed",
+          "dispatch_lag_ms": 1.2821250000000077,
+          "ttft_ms": 2001.381542,
+          "latency_ms": 2259.342333
+        }
+      ]
+    }
+  ],
+  "policies": {
+    "fifo": {
+      "completion_rate": 1.0,
+      "deadline_success_rate": 0.4166666666666667,
+      "completed_latency_p95_ms": 2006.6849160000002,
+      "completed_ttft_p95_ms": 1980.952875,
+      "dispatch_lag_p95_ms": 1.464084000000014
+    },
+    "round-robin": {
+      "completion_rate": 1.0,
+      "deadline_success_rate": 0.3333333333333333,
+      "completed_latency_p95_ms": 2495.127292,
+      "completed_ttft_p95_ms": 2238.904708,
+      "dispatch_lag_p95_ms": 1.2821250000000077
+    },
+    "interleave": {
+      "completion_rate": 1.0,
+      "deadline_success_rate": 0.3333333333333333,
+      "completed_latency_p95_ms": 2525.976875,
+      "completed_ttft_p95_ms": 2265.64375,
+      "dispatch_lag_p95_ms": 1.4116660000000252
+    }
+  }
+}
