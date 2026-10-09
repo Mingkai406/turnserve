@@ -17,6 +17,8 @@ jobs:
         run: cmake -S . -B build -DCMAKE_BUILD_TYPE=Debug -DTURNSERVE_SANITIZE=ON
       - run: cmake --build build --parallel 2
       - run: ctest --test-dir build --output-on-failure
+      - run: python3 -m unittest discover -s tests -p "test_*.py"
+      - run: python3 scripts/load_benchmark.py --repeats 1 --out runs/control
       - name: Replay and verify lifecycle
         run: |
           ./build/turnserve-replay --trace trace.jsonl
@@ -38,3 +40,9 @@ jobs:
             ./build/turnserve-replay --model models/SmolLM2-135M-Instruct-Q4_K_M.gguf --policy "$policy" --trace "runs/$policy.jsonl"
             python3 scripts/inspect_trace.py "runs/$policy.jsonl"
           done
+      - name: Fixed-arrival real-model load
+        run: python3 scripts/load_benchmark.py --model models/SmolLM2-135M-Instruct-Q4_K_M.gguf --repeats 1 --out runs/load
+      - uses: actions/upload-artifact@v4
+        with:
+          name: fixed-arrival-traces
+          path: runs/load

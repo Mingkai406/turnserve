@@ -38,6 +38,14 @@ The full interaction and magnified acknowledgement window expose the handoff bet
 
 These are functional smoke runs, not a controlled performance comparison. Replacement arrival times depend on generated tokens. The current implementation is a local runtime and replay tool; the streaming HTTP adapter is the next integration layer.
 
+## Fixed-arrival load experiment
+
+The separate `turnserve-load` executable replays a workload from an independent producer.
+[Recorded CPU comparison](results/fixed-arrival/README.md) includes three repetitions of all
+three policies, arrival-to-first-token/completion timings, dispatch lag and failure-aware
+deadline success. FIFO wins this small workload; the evidence does not support a universal
+interleaving speedup.
+
 ## Run it
 
 Requires a C++20 compiler, CMake 3.24+, and Git. Python 3.10+ is used only for model download and trace inspection. Linux and macOS are the initial targets.
@@ -102,7 +110,7 @@ The [design notes](docs/design.md) describe API ownership, limits, failure behav
 
 ## Where this is going
 
-The next step is a workload-driven benchmark with fixed arrival traces and an upstream llama-server reference. After that, a streaming adapter can expose the runtime to interactive applications. Compatible fine-tuned models can replace the current test weights; model training and application-specific evaluation remain separate concerns.
+Fixed-arrival ingestion and repeated local policy measurements are implemented. The next step is a broader load matrix and an upstream llama-server reference. After that, a streaming adapter can expose the runtime to interactive applications. Compatible fine-tuned models can replace the current test weights; model training and application-specific evaluation remain separate concerns.
 
 ## Prior work and dependencies
 

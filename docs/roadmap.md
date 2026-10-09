@@ -13,7 +13,7 @@ CI configuration is not a claim that every platform has passed; check the linked
 
 ## Next — controlled measurement
 
-- [ ] Workload-file ingestion, fixed arrival replay, repeated trials
+- [x] Workload-file ingestion, fixed arrival replay, repeated trials
 - [ ] Native llama-server reference and reproducible benchmark manifests
 - [ ] Batch timing, token-gap distributions and memory measurements
 - [ ] Model compatibility tests and additional cancellation/failure stress tests
