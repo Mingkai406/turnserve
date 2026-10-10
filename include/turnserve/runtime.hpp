@@ -45,6 +45,8 @@ public:
     // tick / idle / history must be called by one owner thread, never concurrently.
     bool tick();
     bool idle() const;
+    // Owner-thread only; refuses sessions with active or queued work.
+    bool forget_session(const std::string& session);
     std::vector<Message> history(const std::string& session) const;
 private:
     using Clock = std::chrono::steady_clock;
