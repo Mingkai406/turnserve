@@ -1,0 +1,264 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-10-10T01:48:53.101770+00:00",
+  "binary_sha256": "7689591fce4ce885459e05f347d2eefc04dd67c124c97502a4d69f6266c4bbe8",
+  "model_sha256": null,
+  "measurement": {
+    "port": 61383,
+    "backend": "synthetic (no model inference)",
+    "synthetic_tick_delay_ms": 0
+  },
+  "platform": "macOS-26.4.1-arm64-arm-64bit-Mach-O",
+  "workload": {
+    "requests": 24,
+    "interval_ms": 5,
+    "max_output_tokens": 64,
+    "inflight_limit": 8
+  },
+  "summary": {
+    "completed": 24,
+    "total": 24,
+    "ttft_completed_p50_ms": 5.806375062093139,
+    "ttft_completed_p95_ms": 10.754832997918129,
+    "completion_p95_ms": 12.73012487217784,
+    "completed_with_ttft_within_ms_fraction_of_all": {
+      "100": 1.0,
+      "500": 1.0,
+      "1000": 1.0
+    },
+    "server_cpu_seconds_including_startup": 0.019185,
+    "server_max_rss_bytes": 6963200
+  },
+  "server_metrics": {
+    "submitted": 24,
+    "completed": 24,
+    "cancelled": 0,
+    "failed": 0,
+    "rejected": 0,
+    "disconnects": 0,
+    "slow_clients": 0,
+    "peak_buffer_bytes": 2214,
+    "active": 0,
+    "connections": 1,
+    "buffer_limit_bytes": 65536
+  },
+  "requests": [
+    {
+      "index": 0,
+      "launch_lag_ms": 8.124666986986995,
+      "status": 200,
+      "outcome": "completed",
+      "ttft_ms": 11.361249955371022,
+      "tokens": 64,
+      "duration_ms": 12.515750015154481
+    },
+    {
+      "index": 1,
+      "launch_lag_ms": 3.4428329672664404,
+      "status": 200,
+      "outcome": "completed",
+      "ttft_ms": 6.643207976594567,
+      "tokens": 64,
+      "duration_ms": 7.487875176593661
+    },
+    {
+      "index": 2,
+      "launch_lag_ms": 8.229542057961226,
+      "status": 200,
+      "outcome": "completed",
+      "ttft_ms": 8.7332499679178,
+      "tokens": 64,
+      "duration_ms": 9.29099996574223
+    },
+    {
+      "index": 3,
+      "launch_lag_ms": 9.136458160355687,
+      "status": 200,
+      "outcome": "completed",
+      "ttft_ms": 9.563875151798129,
+      "tokens": 64,
+      "duration_ms": 10.131082963198423
+    },
+    {
+      "index": 4,
+      "launch_lag_ms": 8.877249900251627,
+      "status": 200,
+      "outcome": "completed",
+      "ttft_ms": 9.312957990914583,
+      "tokens": 64,
+      "duration_ms": 9.91575000807643
+    },
+    {
+      "index": 5,
+      "launch_lag_ms": 6.243000039830804,
+      "status": 200,
+      "outcome": "completed",
+      "ttft_ms": 6.782416952773929,
+      "tokens": 64,
+      "duration_ms": 7.955624954774976
+    },
+    {
+      "index": 6,
+      "launch_lag_ms": 1.205249922350049,
+      "status": 200,
+      "outcome": "completed",
+      "ttft_ms": 1.6461669001728296,
+      "tokens": 64,
+      "duration_ms": 2.939332975074649
+    },
+    {
+      "index": 7,
+      "launch_lag_ms": 3.7301250267773867,
+      "status": 200,
+      "outcome": "completed",
+      "ttft_ms": 4.144125152379274,
+      "tokens": 64,
+      "duration_ms": 4.732167115435004
+    },
+    {
+      "index": 8,
+      "launch_lag_ms": 10.173749877139926,
+      "status": 200,
+      "outcome": "completed",
+      "ttft_ms": 10.690416907891631,
+      "tokens": 64,
+      "duration_ms": 12.73012487217784
+    },
+    {
+      "index": 9,
+      "launch_lag_ms": 5.021332995966077,
+      "status": 200,
+      "outcome": "completed",
+      "ttft_ms": 5.806375062093139,
+      "tokens": 64,
+      "duration_ms": 7.701625116169453
+    },
+    {
+      "index": 10,
+      "launch_lag_ms": 0.07524993270635605,
+      "status": 200,
+      "outcome": "completed",
+      "ttft_ms": 0.5972499493509531,
+      "tokens": 64,
+      "duration_ms": 2.750542014837265
+    },
+    {
+      "index": 11,
+      "launch_lag_ms": 2.540874993428588,
+      "status": 200,
+      "outcome": "completed",
+      "ttft_ms": 2.9600830748677254,
+      "tokens": 64,
+      "duration_ms": 3.643958130851388
+    },
+    {
+      "index": 12,
+      "launch_lag_ms": 8.034582948312163,
+      "status": 200,
+      "outcome": "completed",
+      "ttft_ms": 8.511124877259135,
+      "tokens": 64,
+      "duration_ms": 9.864416904747486
+    },
+    {
+      "index": 13,
+      "launch_lag_ms": 3.0737919732928276,
+      "status": 200,
+      "outcome": "completed",
+      "ttft_ms": 3.6467500030994415,
+      "tokens": 64,
+      "duration_ms": 4.908707924187183
+    },
+    {
+      "index": 14,
+      "launch_lag_ms": 5.601499928161502,
+      "status": 200,
+      "outcome": "completed",
+      "ttft_ms": 6.07241690158844,
+      "tokens": 64,
+      "duration_ms": 7.446416886523366
+    },
+    {
+      "index": 15,
+      "launch_lag_ms": 0.6538329180330038,
+      "status": 200,
+      "outcome": "completed",
+      "ttft_ms": 1.2070420198142529,
+      "tokens": 64,
+      "duration_ms": 2.474083099514246
+    },
+    {
+      "index": 16,
+      "launch_lag_ms": 3.1762919388711452,
+      "status": 200,
+      "outcome": "completed",
+      "ttft_ms": 3.5730418749153614,
+      "tokens": 64,
+      "duration_ms": 4.260749788954854
+    },
+    {
+      "index": 17,
+      "launch_lag_ms": 10.077249957248569,
+      "status": 200,
+      "outcome": "completed",
+      "ttft_ms": 10.754832997918129,
+      "tokens": 64,
+      "duration_ms": 13.124292017892003
+    },
+    {
+      "index": 18,
+      "launch_lag_ms": 5.021332763135433,
+      "status": 200,
+      "outcome": "completed",
+      "ttft_ms": 5.887707928195596,
+      "tokens": 64,
+      "duration_ms": 8.102291962131858
+    },
+    {
+      "index": 19,
+      "launch_lag_ms": 0.12349989265203476,
+      "status": 200,
+      "outcome": "completed",
+      "ttft_ms": 0.6647498812526464,
+      "tokens": 64,
+      "duration_ms": 2.945458050817251
+    },
+    {
+      "index": 20,
+      "launch_lag_ms": 2.5408328510820866,
+      "status": 200,
+      "outcome": "completed",
+      "ttft_ms": 2.9711248353123665,
+      "tokens": 64,
+      "duration_ms": 3.748999908566475
+    },
+    {
+      "index": 21,
+      "launch_lag_ms": 4.360999912023544,
+      "status": 200,
+      "outcome": "completed",
+      "ttft_ms": 4.7969999723136425,
+      "tokens": 64,
+      "duration_ms": 5.589749896898866
+    },
+    {
+      "index": 22,
+      "launch_lag_ms": 5.58383297175169,
+      "status": 200,
+      "outcome": "completed",
+      "ttft_ms": 7.0304167456924915,
+      "tokens": 64,
+      "duration_ms": 8.20287480019033
+    },
+    {
+      "index": 23,
+      "launch_lag_ms": 0.7881249766796827,
+      "status": 200,
+      "outcome": "completed",
+      "ttft_ms": 1.4758750330656767,
+      "tokens": 64,
+      "duration_ms": 2.650666981935501
+    }
+  ],
+  "limitations": "Single local run; CPU includes model startup; not a policy comparison or production capacity claim."
+}

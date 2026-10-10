@@ -1,5 +1,8 @@
 # TurnServe
 
+**New:** [bounded HTTP/SSE service](docs/http-service.md) with disconnect cancellation, overload admission, slow-reader limits, and reproducible HTTP load samples.
+
+
 C++ LLM inference runtime with multi-session scheduling, cancellation-safe turn replacement, and trace-driven observability.
 
 [Build & tests](https://github.com/Mingkai406/turnserve/actions/workflows/ci.yml) · [Design](docs/design.md) · [Recorded run](results/smoke-cpu/README.md) · [Roadmap](docs/roadmap.md)
@@ -36,7 +39,7 @@ The full interaction and magnified acknowledgement window expose the handoff bet
 
 [Raw traces and run conditions](results/smoke-cpu/README.md) · [Figure sources, visual references and reproduction](docs/figures.md)
 
-These are functional smoke runs, not a controlled performance comparison. Replacement arrival times depend on generated tokens. The current implementation is a local runtime and replay tool; the streaming HTTP adapter is the next integration layer.
+These are functional smoke runs, not a controlled performance comparison. Replacement arrival times depend on generated tokens. The runtime is also exposed by a bounded loopback HTTP/SSE server; see [transport contracts](docs/http-service.md).
 
 ## Fixed-arrival load experiment
 
@@ -110,7 +113,7 @@ The [design notes](docs/design.md) describe API ownership, limits, failure behav
 
 ## Where this is going
 
-Fixed-arrival ingestion and repeated local policy measurements are implemented. The next step is a broader load matrix and an upstream llama-server reference. After that, a streaming adapter can expose the runtime to interactive applications. Compatible fine-tuned models can replace the current test weights; model training and application-specific evaluation remain separate concerns.
+Fixed-arrival ingestion and repeated local policy measurements are implemented. The next step is a broader load matrix and an upstream llama-server reference. The HTTP/SSE adapter now exposes the runtime to local interactive applications. Compatible fine-tuned models can replace the current test weights; model training and application-specific evaluation remain separate concerns.
 
 ## Prior work and dependencies
 

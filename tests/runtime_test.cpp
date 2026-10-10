@@ -75,6 +75,19 @@ void histories_and_busy_sessions() {
     auto overflow = *f.runtime.submit("c", "extra", 2); drain(f.runtime);
     require(count(f.events, overflow, "rejected") == 1, "session cap ignored");
 }
+void session_reclamation() {
+    Config c; c.max_sessions = 1;
+    Fixture f(c);
+    f.runtime.submit("a", "first", 2);
+    require(!f.runtime.forget_session("a"), "forgot queued session");
+    f.runtime.tick();
+    require(!f.runtime.forget_session("a"), "forgot active session");
+    drain(f.runtime);
+    require(f.runtime.forget_session("a"), "terminal session not reclaimed");
+    require(f.runtime.history("a").empty(), "forgotten history remains");
+    auto next = *f.runtime.submit("b", "second", 2); drain(f.runtime);
+    require(count(f.events, next, "completed") == 1, "session capacity not reclaimed");
+}
 void policy_progress() {
     for (auto policy : {Policy::fifo, Policy::round_robin, Policy::interleave}) {
         Config c; c.policy = policy; c.batch_tokens = 8; c.prefill_chunk = 4;
@@ -158,6 +171,6 @@ void cancel_during_decode() {
 int main() try {
     cancellation_and_replacement(); queued_cancel_and_limits(); invalid_replacement_keeps_old();
     histories_and_busy_sessions(); policy_progress(); failure_cleanup(); concurrent_producers();
-    cancel_during_decode();
-    std::cout << "8 contract suites passed\n"; return 0;
+    cancel_during_decode(); session_reclamation();
+    std::cout << "9 contract suites passed\n"; return 0;
 } catch (const std::exception& e) { std::cerr << e.what() << '\n'; return 1; }

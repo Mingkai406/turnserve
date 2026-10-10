@@ -173,6 +173,16 @@ bool Runtime::tick() {
     }
     return !idle();
 }
+bool Runtime::forget_session(const std::string& session) {
+    std::lock_guard lock(mutex_);
+    for (const auto& command : commands_)
+        if (!command.cancel && command.session == session) return false;
+    auto it = sessions_.find(session);
+    if (it == sessions_.end()) return true;
+    if (it->second.current) return false;
+    sessions_.erase(it);
+    return true;
+}
 bool Runtime::idle() const {
     std::lock_guard lock(mutex_);
     return commands_.empty() && jobs_.empty();

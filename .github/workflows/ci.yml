@@ -42,6 +42,8 @@ jobs:
           done
       - name: Fixed-arrival real-model load
         run: python3 scripts/load_benchmark.py --model models/SmolLM2-135M-Instruct-Q4_K_M.gguf --repeats 1 --out runs/load
+      - name: Real-model HTTP streaming
+        run: TURNSERVE_TEST_MODEL="$PWD/models/SmolLM2-135M-Instruct-Q4_K_M.gguf" python3 tests/http_contracts.py build/turnserve-server
       - uses: actions/upload-artifact@v4
         with:
           name: fixed-arrival-traces

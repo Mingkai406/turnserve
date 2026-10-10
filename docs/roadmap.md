@@ -20,7 +20,7 @@ CI configuration is not a claim that every platform has passed; check the linked
 
 ## Then — application adapter
 
-- [ ] Streaming HTTP interface, request cancellation and backpressure semantics
+- [x] Loopback HTTP/SSE interface, disconnect cancellation, bounded output buffers, admission limits and graceful shutdown
 - [ ] Explicit session close, observability and deployment hardening
 - [ ] Compatible fine-tuned model integration with quality regression checks
 
